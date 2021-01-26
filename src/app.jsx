@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './app.css';
 import Contents from "./components/contents";
 import Topbar from "./components/topbar";
@@ -12,13 +12,15 @@ function App({youtube}) {
     setSelectedVideo(video)
   }
 
-  const search = (query) => {
-    youtube.search(query).then(videos=>{setVideos(videos); setSelectedVideo(null);})
-  }
+  const search = useCallback(
+    query=> {
+      setSelectedVideo(null);
+      youtube.search(query).then(videos=>setVideos(videos));
+    }, [youtube]);
 
   useEffect(()=>{
     youtube.mostPopular().then(videos=>setVideos(videos))
-  }, []);
+  }, [youtube]);
 
   return (
     <div className="content">

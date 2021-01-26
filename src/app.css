@@ -45,7 +45,7 @@ button {
 }
 
 .home {
-  width: 180px;
+  width: 15%;
   display: inline-block;
   height: inherit;
   text-align: center;
@@ -57,7 +57,7 @@ button {
 }
 
 .search {
-  width: 1050px;
+  width: 80%;
   height: 45px;
   display: inline-block;
   margin-left: 2rem;
@@ -141,4 +141,10 @@ button {
 .videozone p {
   width: 100%;
   padding: 0.5rem;
+}
+
+@media (max-width: 1280px) {
+  .content {
+    width: 100%;
+  }
 }

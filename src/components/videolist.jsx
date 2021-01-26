@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 
-const videolist = ({video, video : {snippet},onClickVideo, display}) => {
+const videolist = memo(({video, video : {snippet},onClickVideo, display}) => {
     const displayType = display === 'list' ? 'keywordplay' : 'keywordlist'
     return(
-    <li className={`${"keyworddefault"} ${displayType}`} onClick={(e)=>{onClickVideo(video); console.log(e)}}>
+    <li className={`${"keyworddefault"} ${displayType}`} onClick={()=>{onClickVideo(video);}}>
         <span className="listimg"><img src={snippet.thumbnails.medium.url}></img></span>
         <span className="listtitle">{snippet.title}</span>
         <span className="listdesc">{snippet.channelTitle}</span>
@@ -12,6 +12,6 @@ const videolist = ({video, video : {snippet},onClickVideo, display}) => {
     )
 }
        
-
+)
 
 export default videolist;
