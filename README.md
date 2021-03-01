@@ -33,5 +33,5 @@ Youtube APIs를 이용하여 실제 youtube video list를 불러오고,
 - Velog : <>
 
 ### 배포
-`Netlify`
-- Netlify Link : <>
+`Github`
+- Github Link : <https://sohyeonbak.github.io/Youtube-APIs-Side-Project-/>
