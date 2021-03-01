@@ -22,7 +22,7 @@ Youtube APIs를 이용하여 실제 youtube video list를 불러오고,
 
 ### Study 📌
 `React-hooks api 정리`
-- Velog : <>
+- Velog : <https://velog.io/@sohyeonbak_oly/React-hooks>
 
 
 `Rest API 정리`
